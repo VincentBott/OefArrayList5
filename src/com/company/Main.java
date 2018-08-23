@@ -56,11 +56,24 @@ public class Main {
         } while (!naam.equals(""));
 
 
+        /*  De onderstaande (werkende) manier is van mezelf.
+
         Collections.reverse(personen);
 
         for (Persoon person: personen) {
 
             System.out.printf("\n%s is %d jaar oud.\n", person.getNaam(), person.getLeeftijd());
+        }
+        */
+
+
+        // De onderstaande manier is de (werkende) versie van de docent.
+
+        for(int i= personen.size()-1; i>=0; i--){
+
+            Persoon p = personen.get(i);
+
+            System.out.printf("%s is %d jaar oud.%n", p.getNaam(), p.getLeeftijd());
         }
     }
 
